@@ -1,0 +1,600 @@
+<style>
+    .display-hidden {
+        top: 600px !important;
+        display: none !important;
+        transition: 2s;
+    }
+    
+    .display-none {
+        display: none !important;
+    }
+    
+    body {
+        overflow-x: hidden;
+        background-color: whitesmoke;
+    }
+    
+    .active span {
+        transition: 1s;
+    }
+    
+    .block-wrapper .active div.clicked {
+        transition: 1s;
+    }
+    
+    div {
+        transition: 0.3s;
+    }
+    
+    #product-banner {
+        vertical-align: top;
+        display: inline-block;
+        position: relative;
+    }
+    
+    #banner-C {
+        width: 600px;
+    }
+    
+    #product-banner img {
+        display: inline-block;
+        position: relative;
+        top: 40px;
+        left: 7%;
+    }
+    
+    #images div {
+        display: inline-block;
+    }
+    
+    #entire-container {
+        position: relative;
+        display: inline-block;
+        width: 1600px;
+        height: 1200px;
+    }
+    
+    #title-wrapper {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        display: inline-block;
+        position: relative;
+        top: 2%;
+        left: 2%;
+        margin-bottom: 30px;
+        width: 1920px;
+    }
+    
+    #images {
+        display: inline-block;
+        overflow: visible;
+        padding: 0;
+        width: 200px;
+        height: 100px;
+        list-style-type: none;
+    }
+    
+    .product-view-element-A {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        margin-right: 50px;
+    }
+    
+    .product-view-element-C {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        margin-right: 50px;
+    }
+    
+    #product-A {
+        position: relative;
+        width: 600px;
+    }
+    
+    #product-C {
+        position: relative;
+        width: 600px;
+    }
+    
+    .product-view-element-C img {
+        position: relative;
+        width: 220px;
+    }
+    
+    #project-A:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .product-view-element-A img {
+        position: relative;
+        width: 220px;
+    }
+    
+    #project-B:hover {
+        background-color: black;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    
+    #project-C:hover {
+        background-color: black;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    
+    #project-D:hover {
+        background-color: black;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    
+    #project-E:hover {
+        background-color: black;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    
+    #project-F:hover {
+        background-color: black;
+        color: whitesmoke;
+        cursor: pointer;
+    }
+    
+    #transition-text-wrapper {
+        display: inline-block;
+        position: relative;
+        top: 30px;
+        left: 2%;
+        width: 200px;
+        height: auto;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: roboto;
+    }
+    
+    #title-wrapper svg {
+        width: 125px;
+    }
+    
+    h1 span::before {
+        content: '';
+        color: #7d1fdc;
+        animation: profile 5s infinite;
+    }
+    
+    @keyframes profile {
+        0% {
+            content: 'new horizons'
+        }
+        25% {
+            content: 'manifestation'
+        }
+        50% {
+            content: 'storytelling'
+        }
+        75% {
+            content: 'envisioning'
+        }
+        100% {
+            content: 'new horizons'
+        }
+    }
+    
+    #transition-wrapper {
+        display: inline-block;
+        position: relative;
+        top: 15%;
+        margin-left: 75px;
+        width: 980px;
+        height: 600px;
+        background-color: #000000;
+        transition: 2s;
+    }
+    
+    #transition-wrapper div {
+        outline: 3px solid whitesmoke;
+    }
+    
+    .note {
+        vertical-align: top;
+    }
+    
+    .block-wrapper {
+        width: 14%;
+        height: 100%;
+        background-color: #888888;
+        display: inline-block;
+    }
+    
+    .vertical-menu {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    
+    .menu {
+        font-family: roboto;
+        font-size: 14px;
+        margin: 0px 0px 0px 15px;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+    
+    .vertical-menu a:hover {
+        background-color: rgb(231, 235, 5);
+    }
+    
+    .vertical-menu a.menu+.active {
+        color: blue;
+    }
+    
+    .center-block-wrapper {
+        width: 42.5%;
+        display: inline-block;
+    }
+    
+    .active {
+        width: 42.5%;
+        background-position: left center;
+    }
+    
+    .before-active {
+        width: 42.5%;
+    }
+    
+    .space-block {
+        width: 100%;
+        height: 66.6%;
+        background-color: #222222;
+    }
+    
+    .image-block_1 {
+        width: 100%;
+        height: 33.3%;
+        background-color: rgb(40, 60, 215);
+        background-repeat: no-repeat;
+        background-size: 1500px;
+    }
+    
+    .active .image-block_1 {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(69, 108, 206);
+        background-size: 2000px;
+        background-position: 500px 750px;
+    }
+    
+    .image-block_2 {
+        width: 100%;
+        height: 33.3%;
+        background-color: rgb(106, 201, 165);
+        background-repeat: no-repeat;
+        background-size: 2400px;
+    }
+    
+    .active .image-block_2 {
+        width: 100%;
+        background-color: rgb(62, 205, 150);
+        height: 100%;
+    }
+    
+    .image-block_3 {
+        width: 100%;
+        height: 33.3%;
+        background-color: rgb(227, 210, 30);
+        background-repeat: no-repeat;
+        background-size: 700px;
+        background-position: 300px 500px;
+    }
+    
+    .active .image-block_3 {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(223, 223, 59);
+        background-size: 1200px;
+        background-position: 90%;
+    }
+    
+    .active .space-block {
+        width: 100%;
+        height: 0%;
+    }
+    
+    .block-title {
+        font-family: 'Space Grotesk', sans-serif;
+        position: relative;
+        top: -400px;
+        right: -10;
+        font-size: 34px;
+        color: whitesmoke;
+        font-weight: 900;
+        user-select: none;
+    }
+    
+    .active .block-title {
+        color: #513763;
+        user-select: none;
+    }
+    
+    .space-window {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(82, 82, 82);
+        transition: width 0.3s, height 0s;
+    }
+    
+    .active .space-window {
+        width: 0%;
+        height: 0%;
+        background-color: rgb(82, 82, 82);
+    }
+    
+    #product-view-wrapper {
+        position: relative;
+        top: 5%;
+        left: 15%;
+        width: 980px;
+    }
+</style>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<div id="entire-container">
+    <div id="title-wrapper" onclick="showNav(); disableProject();"><a href="./portfolio_page.html" style="text-decoration: none; color: black;">Matthew Nam</a>
+        <div class="vertical-menu">
+            <a id="home" class="menu" href="#">Home</a>
+            <a id="resume" class="menu" href="#">Resume</a>
+        </div>
+    </div>
+    <div id="transition-text-wrapper" style="display: inline-block;">
+        <h1 id="header" style="position: absolute; bottom:295px;">Environments Design and Design Research for <span></span></h1><span id="value-text" class="display-none">CONVICTION AND PATIENCE</span><span id="intro-text">VISION-STATEMENT– I always think about how design thinking can inform people to be more conscious of the natural world. We readily dismiss the pattern, insights, and phenomena happening around us. <br>We can be more aware of small details that make this world beautiful in order to start conversations, debates, and discussions to improve the human condition.</span>
+
+        <div id="products-wrapper" class="image-wrapper display-none">
+            <ul id="images">
+                <li>
+                    <div id="project-A" class="imageAndText" onclick="showProjectA(this);disableProjectC(this); disableNav(this); showProject(this);">Growth Visualization Project</div>
+                </li>
+                <li>
+                    <div id="project-B" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">UPMC Health Service</div>
+                </li>
+                <li>
+                    <div id="project-C" class="imageAndText" onclick="disableProjectA(this);showProjectC(this);disableNav(this); showProject(this);">Design Concept Map</div>
+                </li>
+                <li>
+                    <div id="project-D" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">Look Good</div>
+                </li>
+                <li>
+                    <div id="project-E" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">Closet</div>
+                </li>
+                <li>
+                    <div id="project-F" class="imageAndText" onclick="disableProjectA(this);disableProjectC(this);disableNav(this); showProject(this);">Helvetica</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="transition-wrapper">
+        <div id="about" class="block-wrapper active before-active" onclick="blockWrapperOnclickEventHandler(this); pageTransitionHandler(this); onAboutClickEventHandler(this); showIntroText(this); disableProject(this); disableValueText(this);">
+            <div class="image-block_1" style="background-position: 60% 90%;">
+            </div>
+            <div class="space-block">
+                <div class="space-window"></div>
+            </div>
+            <span class="block-title">
+                About.
+            </span>
+        </div>
+        <div id="products" class="block-wrapper center-block-wrapper" onclick="blockWrapperOnclickEventHandler(this); pageTransitionHandler(this); onProductsClickEventHandler(this); disableIntroText(this); disableValueText(this);">
+            <div class="image-block_2" style="background-position: 66% 3%;">
+            </div>
+            <div class="space-block">
+                <div class="space-window"></div>
+            </div>
+            <span class="block-title">
+        Work.
+        </span>
+        </div>
+        <div id="value" class="block-wrapper" onclick="blockWrapperOnclickEventHandler(this); pageTransitionHandler(this); onValueClickEventHandler(this); showIntroText(this); disableProject(this); showValueText(this);">
+            <div class="image-block_3" style="background-position: 80% 70%;">
+            </div>
+            <div class="space-block">
+                <div class="space-window"></div>
+            </div>
+            <span class="block-title">
+                Value.
+            </span>
+        </div>
+    </div>
+    <div id="product-banner" class="display-none">
+        <img id="banner-A" src="images/image_005.gif">
+        <img id="banner-C" src="images/image_006.jpg">
+    </div>
+    <div id="product-view-wrapper" class="display-none">
+        <div id="product-A" class="product-view-element-A note display-none">
+            <div>
+                <h1 style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ABOUT</h1>
+                This project is a study and manifestation of a concept intented to encourage people to build savings habits
+
+                <h1 style="font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">PROBLEM SPACE/PHENOMENA</h1>
+                Like 67% of American college students who are unable to graduate within 4 years, prudent spending is an essential life skill. With graduation delayed and financial independence out of sight, it can be an overwhelming experience without proper preparation
+                to grow into the habit of saving for yourself in the future. Especially if someone lives a poorly managed financial life, an unregulated environment like college is not very helpful. One of the problems that I identified through initial
+                research is that many students accumulate debt during college, and this debt usually becomes a financial burden for several years. Without a concept of savings, it becomes difficult to pay off the debt you owe and maintain a stable credit
+                in the future (which is common knowledge for adults but may be new to young adults).
+            </div>
+            <br>
+            <div class="product-view-element-A">
+                <img clas src="images/image_005.gif">
+                <img clas src="images/image_005.gif">
+            </div>
+            <div class="product-view-element-A" style="vertical-align: top; width: 346px; margin: 0px;">
+                research is that many students accumulate debt during college, and this debt usually becomes a financial burden for several years. Without a concept of savings, it becomes difficult to pay off the debt you owe and maintain a stable credit in the future
+                (which is common knowledge for adults but may be new to young adults).
+            </div>
+            <div>
+                <h1 style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ABOUT</h1>
+                This project is about manifesting a concept and study intented to encourage people build a habit for savings.
+
+                <h1 style="font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">PROBLEM SPACE/PHENOMENA</h1>
+                Like 67% of American college students who are unable to graduate within 4 years, prudent spending is an essential life skill. With graduation delayed and financial independence out of sight, it can be an overwhelming experience without proper preparation
+                to grow into the habit of saving for yourself in the future. Especially if someone lives a poorly managed financial life, an unregulated environment like college is not very helpful. One of the problems that I identified through initial
+                research is that many students accumulate debt during college, and this debt usually becomes a financial burden for several years. Without a concept of savings, it becomes difficult to pay off the debt you owe and maintain a stable credit
+                in the future (which is common knowledge for adults but may be new to young adults).
+            </div>
+            <div class="product-view-element-A">
+                <img clas src="images/image_005.gif">
+                <div style="height:300px; width:auto;"></div>
+            </div>
+        </div>
+        <div id="product-C" class="product-view-element-C note display-none">
+            <div>
+                <h1 style="display:block; font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">WHAT DOES THIS PROJECT DO?</h1>
+                This project is about manifesting a concept and study intented to encourage people build a habit for savings.
+
+                <h1 style="font-size: 16px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">INSPIRATION/PROBLEM SPACE</h1>
+                Like 67% of American college students who are unable to graduate within 4 years, prudent spending is an essential life skill. With graduation delayed and financial independence out of sight, it can be an overwhelming experience without proper preparation
+                to grow into the habit of saving for yourself in the future. Especially if someone lives a poorly managed financial life, an unregulated environment like college is not very helpful. One of the problems that I identified through initial
+                research is that many students accumulate debt during college, and this debt usually becomes a financial burden for several years. Without a concept of savings, it becomes difficult to pay off the debt you owe and maintain a stable credit
+                in the future (which is common knowledge for adults but may be new to young adults).
+            </div>
+            <br>
+            <div class="product-view-element-C">
+                <img clas src="images/image_006.jpg">
+            </div>
+            <div class="product-view-element-C">
+                <img clas src="images/image_006.jpg">
+            </div>
+            <div class="product-view-element-C">
+                <img clas src="images/image_006.jpg">
+            </div>
+            <div class="product-view-element-C">
+                <img clas src="images/image_006.jpg">
+            </div>
+            <div class="product-view-element-C">
+                <img clas src="images/image_006.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const blockWrapperOnclickEventHandler = (blockWrapper) => {
+        document.querySelector(".active").classList.remove("active");
+        blockWrapper.classList.add("active");
+
+        if (!blockWrapper.classList.contains("center-block-wrapper")) {
+            document.querySelector(".before-active").classList.remove("before-active");
+            blockWrapper.classList.add("before-active");
+        }
+    }
+
+    const pageTransitionHandler = (blockWrapper) => {
+        document.getElementById("transition-wrapper");
+        blockWrapper.style.display = "hidden";
+    }
+
+    const productPageMenuHandler = (blockWrapper) => {
+        document.querySelector("image-wrapper");
+        blockWrapper.style.display = "inline-block";
+    }
+
+    const productPageTextHandler = (blockWrapper) => {
+        document.querySelector("image-wrapper");
+        blockWrapper.style.display = "inline-block";
+    }
+
+    const onAboutClickEventHandler = () => {
+        disableProductsWrapper();
+    }
+
+    const onProductsClickEventHandler = () => {
+        showProductsWrapper();
+    }
+
+    const onValueClickEventHandler = () => {
+        disableProductsWrapper();
+    }
+
+    const disableIntroText = () => {
+        document.querySelector("#intro-text").classList.add("display-none");
+    }
+    const showIntroText = () => {
+        document.querySelector("#intro-text").classList.remove("display-none");
+        document.querySelector("#value-text").classList.add("display-none");
+    }
+
+    const disableValueText = () => {
+        document.querySelector("#value-text").classList.add("display-none");
+    }
+    const showValueText = () => {
+        document.querySelector("#value-text").classList.remove("display-none");
+        document.querySelector("#intro-text").classList.add("display-none");
+    }
+
+    const showProductsWrapper = () => {
+        document.querySelector("#products-wrapper").classList.remove("display-none");
+    }
+
+    const disableProductsWrapper = () => {
+        document.querySelector("#products-wrapper").classList.add("display-none");
+        document.querySelector("#product-banner").classList.add("display-none");
+    }
+
+    const disableProject = () => {
+        document.querySelector("#product-view-wrapper").classList.add("display-none");
+        document.querySelector("#product-banner").classList.add("display-none");
+    }
+
+    const showProject = () => {
+        document.querySelector("#product-view-wrapper").classList.remove("display-none")
+        document.querySelector("#product-banner").classList.remove("display-none");
+    }
+
+    const showProjectA = () => {
+        document.querySelector("#product-A").classList.remove("display-none")
+        document.querySelector("#banner-A").classList.remove("display-hidden");
+        document.querySelector(".product-view-element-A").classList.remove("display-none")
+
+    }
+
+    const disableProjectA = () => {
+        document.querySelector("#product-A").classList.add("display-none");
+        document.querySelector("#banner-A").classList.add("display-hidden");
+        document.querySelector(".product-view-element-A").classList.add("display-none")
+    }
+
+    const showProjectC = () => {
+        document.querySelector("#product-C").classList.remove("display-none")
+        document.querySelector("#banner-C").classList.remove("display-hidden");
+        document.querySelector(".product-view-element-C").classList.remove("display-none")
+
+    }
+
+    const disableProjectC = () => {
+        document.querySelector("#product-C").classList.add("display-none");
+        document.querySelector("#banner-C").classList.add("display-hidden");
+        document.querySelector(".product-view-element-C").classList.add("display-none")
+    }
+
+
+    const showNav = () => {
+        document.querySelector("#header").classList.remove("display-none")
+        document.querySelector("#transition-wrapper").classList.remove("display-none")
+        document.querySelector("#products-wrapper").classList.add("display-none")
+        document.querySelector("#intro-text").classList.remove("display-none")
+    }
+
+    const disableNav = () => {
+        document.querySelector("#header").classList.add("display-none")
+        document.querySelector("#transition-wrapper").classList.add("display-none")
+        document.querySelector("#products-wrapper").classList.remove("display-none")
+
+    }
+</script>
